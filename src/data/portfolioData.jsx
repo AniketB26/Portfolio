@@ -69,7 +69,8 @@ export const portfolioData = {
         'Responsive Design: Fully optimized for all device sizes'
       ],
       techStack: ['React 19', 'Vite 7', 'Tailwind CSS', 'Framer Motion', 'Context API'],
-      link: 'https://github.com/AniketB26/EcoSort',
+      link: 'https://eco-sort-two.vercel.app/',
+      repository: 'https://github.com/AniketB26/EcoSort',
       year: '2026',
       image: ecoSortImg,
       category: 'Web Projects',
@@ -88,7 +89,8 @@ export const portfolioData = {
         'Secure Authentication: JWT-based user authentication system'
       ],
       techStack: ['React', 'Node.js', 'Express', 'Groq LLaMA 3.3', 'MongoDB Atlas', 'JWT'],
-      link: 'https://github.com/AniketB26/DataQueryPro',
+      link: 'https://data-query-pro.vercel.app/',
+      repository: 'https://github.com/AniketB26/DataQueryPro',
       year: '2026',
       image: dataQueryImg,
       category: 'Web Projects',

@@ -48,8 +48,14 @@ const ProjectDetail = () => {
 
    const isUIDesign = project.category === 'UI Projects' || project.category === 'Case Studies';
    const hasFigma = project.figmaUrl && isUIDesign;
+   
+   // Logic for links: 
+   // - project.link is the primary (Live)
+   // - project.repository is secondary (GitHub/Source)
    const liveLink = project.link || "#";
-   const isGithub = liveLink.includes("github");
+   const repoLink = project.repository || (liveLink.includes("github") ? liveLink : null);
+   
+   const isLiveLinkGithub = liveLink.includes("github");
 
    return (
       <main className="pt-4 pb-32">
@@ -94,35 +100,43 @@ const ProjectDetail = () => {
 
                {/* Actions Bar */}
                <div className="border-t border-border bg-secondary/10 p-4 flex items-center justify-center gap-3">
-                  {isGithub && (
+                  {repoLink && (
                      <Button
                         variant="outline"
                         size="sm"
                         className="border-border/60"
-                        onClick={() => window.open(liveLink, "_blank")}
+                        onClick={() => window.open(repoLink, "_blank")}
                      >
                         <CodeCircleIcon size={16} className="mr-2" />
                         Source
                      </Button>
                   )}
-                  <Button
-                     variant="primary"
-                     size="sm"
-                     className="shadow-lg shadow-primary/20"
-                     onClick={() => window.open(liveLink, "_blank")}
-                  >
-                     {isGithub ? (
-                        <>
-                           <Github01Icon size={16} className="mr-2" />
-                           Repository
-                        </>
-                     ) : (
-                        <>
-                           <PlayIcon size={16} className="inline mr-2" strokeWidth={2} />
-                           Live
-                        </>
-                     )}
-                  </Button>
+                  
+                  {/* Show "Live" only if the link is not the same as repo link or repo is different */}
+                  {(!isLiveLinkGithub || !repoLink) && (
+                     <Button
+                        variant="primary"
+                        size="sm"
+                        className="shadow-lg shadow-primary/20"
+                        onClick={() => window.open(liveLink, "_blank")}
+                     >
+                        <PlayIcon size={16} className="inline mr-2" strokeWidth={2} />
+                        Live
+                     </Button>
+                  )}
+
+                  {/* If the live link IS the GitHub link, and we don't have a separate repo link, keep the repository button */}
+                  {(isLiveLinkGithub && !project.repository) && (
+                     <Button
+                        variant="primary"
+                        size="sm"
+                        className="shadow-lg shadow-primary/20"
+                        onClick={() => window.open(liveLink, "_blank")}
+                     >
+                        <Github01Icon size={16} className="mr-2" />
+                        Repository
+                     </Button>
+                  )}
                </div>
             </motion.div>
          </section>
