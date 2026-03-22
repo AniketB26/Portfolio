@@ -24,7 +24,7 @@ export const portfolioData = {
     socials: [
       { name: "Email", icon: Mail01Icon, link: "mailto:aniketbajpai230@gmail.com", tag: "aniketbajpai230" },
       { name: "GitHub", icon: GithubIcon, link: "https://github.com/AniketB26", tag: "AniketB26" },
-      { name: "LinkedIn", icon: Linkedin01Icon, link: "https://www.linkedin.com/in/aniket-bajpai", tag: "aniket-bajpai" },
+      { name: "LinkedIn", icon: Linkedin01Icon, link: "https://www.linkedin.com/in/aniket-bajpai-85017627a", tag: "aniket-bajpai-85017627a" },
       { name: "LeetCode", icon: LeetcodeIcon, link: "https://leetcode.com/u/aniketbajpai230/", tag: "aniketbajpai230" },
     ]
   },

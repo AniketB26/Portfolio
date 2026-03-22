@@ -66,7 +66,7 @@ const CommandPalette = () => {
       group: "Social Links",
       items: [
         { id: 's1', label: 'GitHub', icon: GithubIcon, action: () => window.open('https://github.com/AniketB26', '_blank') },
-        { id: 's2', label: 'LinkedIn', icon: Linkedin01Icon, action: () => window.open('https://www.linkedin.com/in/aniket-bajpai', '_blank') },
+        { id: 's2', label: 'LinkedIn', icon: Linkedin01Icon, action: () => window.open('https://www.linkedin.com/in/aniket-bajpai-85017627a', '_blank') },
         { id: 's3', label: 'LeetCode', icon: Globe02Icon, action: () => window.open('https://leetcode.com/u/aniketbajpai230/', '_blank') },
         { id: 's4', label: 'Mail', icon: Mail01FreeIcons, action: () => window.open('mailto:aniketbajpai230@gmail.com', '_blank') },
       ]

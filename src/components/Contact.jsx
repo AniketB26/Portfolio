@@ -98,7 +98,7 @@ export default function Contact() {
             </TactileButton>
 
             <TactileButton
-              onClick={() => window.open('https://www.linkedin.com/in/aniket-bajpai', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/aniket-bajpai-85017627a', '_blank')}
               className="flex-1"
               label="LINKEDIN"
             >
