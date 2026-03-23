@@ -4,7 +4,7 @@ import {
 
 import profileImage from '../assets/profile2.png';
 import profileVideo from '../assets/profile-video.webm';
-import cvFile from '../assets/CV/MOVEIN_CV.pdf';
+import cvFile from '../assets/CV/Aniket_gen_cv.pdf';
 import ecoSortImg from '../assets/Project1EcoSort.png';
 import dataQueryImg from '../assets/Project2DataQueryPro.png';
 import funnelChurnImg from '../assets/Project3FunnelandChurnAnalysis.png';
